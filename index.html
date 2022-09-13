@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#db5945">
+    <meta name="description" content="Horaires IM HEIG-VD">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon-76x76.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon-144x144.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="assets/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="assets/favicon-512x512.png">
+    <title>IM - Horaires</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>IM - Horaires</h1>
+      <section id="loading" class="modal"></section>
+      <section id="ui">
+        <div class="action" id="actions">
+          <button data-role="template" data-tmpl-id="btn-schedule" data-class-id="" class="btn-schedule"></button>
+        </div>
+        <div class="action">
+          <label for="input-filter-courses">Filtrer par cours</label>
+          <select id="input-filter-courses">
+            <option data-role="template" data-tmpl-id="option-course">Tous</option>
+          </select>
+        </div>
+        <div class="action">
+          <label for="input-show-old-courses">Afficher l'historique</label>
+          <input type="checkbox" id="input-show-old-courses">
+        </div>
+      </section>
+      <section id="no-results">
+        <div data-role="template" data-tmpl-id="no-results">
+          Aucun résultat pour les filtres selectionnés
+        </div>
+      </section>
+      <section id="results">
+        <table>
+          <tbody id="schedule">
+            <tr data-role="template" data-tmpl-id="event">
+              <td data-tmpl-ph="date-fr" class="date"></td>
+              <td>
+                <div data-tmpl-ph="start-fr"></div>
+                <div data-tmpl-ph="end-fr"></div>
+              </td>
+              <td>
+                <div data-tmpl-ph="label" class="course"></div>
+                <div data-tmpl-ph="class"></div>
+              </td>
+              <td data-tmpl-ph="room" class="room"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <div data-role="template" data-tmpl-id="activated">
+        <main>
+          <h3>Une nouvelle version de l'application a été détéctée et installée.</h3>
+          <h4>Merci de <a href="/">cliquer ici</a> pour l'utiliser.</h4>
+        <main>
+      </div>
+    </div>
+  </body>
+</html>

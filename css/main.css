@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: monospace;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+#container {
+  text-align: center;
+}
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+h1 {
+  padding: 0.3rem 0 0.5rem 0;
+  margin: 0 0 0.5rem 0;
+  background-color: #eff;
+  border-bottom: solid #ddd 1px;
+}
+div.action {
+  padding: 0 1rem 1rem 1rem;
+}
+button {
+  background: white;
+  margin: 0.2rem;
+  padding: 0.15rem 0.3rem;
+}
+button.selected {
+  background: #eff;
+}
+button:hover {
+  cursor: pointer;
+}
+#input-filter-courses {
+  font-size: 0.9rem;
+}
+#input-show-old-courses {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+table {
+  max-width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+th {
+  text-align: center;
+  background-color: #eee;
+  border: solid black 1px;
+  letter-spacing: 0.3rem;
+}
+td {
+  padding: 0.2rem 0.5rem;
+  border: solid black 1px;
+  text-align: left;
+  vertical-align: top;
+}
+tr:nth-child(odd) {
+  background: #eff;
+}
+.zebra {
+  background: #eff;
+}
+[data-role='template'] {
+  display: none;
+}
+.course {
+  font-weight: bold;
+}

@@ -1,0 +1,38 @@
+{
+  "name": "IM Horaires",
+  "short_name": "IM Horaires",
+  "description": "Horaires IM HEIG-VD",
+  "lang": "fr",
+  "start_url" : "/",
+  "display": "fullscreen",
+  "background_color": "white",
+  "theme_color": "#eff",
+  "icons": [
+    {
+      "src": "assets/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32",
+      "purpose": "any maskable"
+    }, {
+      "src": "assets/favicon-76x76.png",
+      "type": "image/png",
+      "sizes": "76x76",
+      "purpose": "any maskable"
+    }, {
+      "src": "assets/favicon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any maskable"
+    }, {
+      "src": "assets/favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    }, {
+      "src": "assets/favicon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}
