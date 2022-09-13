@@ -86,7 +86,7 @@ watch(scheduleByDate, () => {
 Dom.delegateOn('#actions', '.btn-schedule', 'click', evt => classId.value = evt.target.dataset.classId);
 // Set the showHistory state on checkbox input change
 Dom.on('#input-show-old-courses', 'input', evt => showHistory.value = evt.currentTarget.checked);
-// Set the selected couurse state for filtering on <select> input change
+// Set the selected course state for filtering on <select> input change
 Dom.on('#input-filter-courses', 'input', evt => course.value = evt.currentTarget.value);
 
 // Installation and detecting change of the service worker

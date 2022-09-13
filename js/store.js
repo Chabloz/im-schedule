@@ -18,7 +18,7 @@ export const allCourses = computed(() => {
   return [conf.allCoursesFilter, ...courses]; // Add the "All courses" at the beginning
 });
 
-// The classes list is computed from an extract of the classe name in the schedule
+// The classes list is computed from an extract of the class name in the schedule
 export const allClasses = computed(() => {
   let classes = schedule.value.map(event => event.class); // take only class name
   classes = [...new Set(classes)]; // remove duplicate
@@ -28,7 +28,7 @@ export const allClasses = computed(() => {
 
 // classId is saved in localStorage
 export const classId = refLocalstorage('classId', conf.allClassesFilter);
-// If not a valide classe, reset it to the default one (show all classes)
+// If not a valid class, reset it to the default one (show all classes)
 watch(allClasses, () => {
   if (allClasses.value.includes(classId.value)) return;
   classId.value = conf.allClassesFilter;
