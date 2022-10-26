@@ -1,4 +1,4 @@
-import { getNode, getNodes } from './dom.js';
+import { getNodes, forEach } from './dom.js';
 
 // Initial load of all the templates in the default document
 const templates = new Map();
@@ -14,9 +14,7 @@ export default function generate(id, data = null) {
   const tmpl = templates.get(id);
   const dom = tmpl.cloneNode(true);
   for (const prop in data) {
-    const node = getNode(`[data-tmpl-ph="${prop}"]`, dom);
-    if (!node) continue;
-    node.textContent = data[prop];
+    forEach(`[data-tmpl-ph="${prop}"]`, ele => ele.textContent = data[prop], dom);
   }
   // single node template management
   if (getNodes(`[data-tmpl-ph]`, dom).length == 0 && data) {
