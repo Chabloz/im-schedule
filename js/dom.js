@@ -16,8 +16,8 @@ export function on(selector, event, callback, options, dom = document) {
 
 export function delegateOn(selector, childSelector, event, callback, options, dom = document) {
   forEach(selector, node => node.addEventListener(event, evt => {
-    const possibleTargets = getNodes(childSelector, event.currentTarget);
-    if (![...possibleTargets].includes(evt.target)) return;
-    callback(evt);
+    const closest = evt.target.closest(childSelector);
+    if (!closest) return;
+    callback(closest, evt);
   }, options), dom);
 }
